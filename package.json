@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/gatsbyjs/gatsby-dev-sites-proxy.git"
   },
+  "engines": {
+    "node": "8.x.x"
+  },
   "author": "",
   "license": "MIT",
   "bugs": {
