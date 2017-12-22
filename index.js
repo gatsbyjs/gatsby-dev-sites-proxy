@@ -8,10 +8,10 @@ http
     if (req.url.slice(-1) === `/`) {
       req.url = `${req.url}index.html`
     }
-    console.log(req.headers.hostname, req.url)
+    console.log(req.headers, req.url)
     proxy.web(req, res, {
       target: `http://s3.amazonaws.com/gatsby-js-builds/examples/${
-        req.headers.hostname
+        req.headers.host
       }`,
     })
   })
