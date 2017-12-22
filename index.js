@@ -8,7 +8,7 @@ http
     if (req.url.slice(-1) === `/`) {
       req.url = `${req.url}index.html`
     }
-    console.log(req.headers, req.url)
+    console.log(req.headers.host, req.url)
     console.log(
       `http://s3.amazonaws.com/gatsby-js-builds/examples/${req.headers.host}`
     )
