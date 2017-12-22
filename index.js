@@ -15,5 +15,5 @@ http
       }`,
     })
   })
-  .listen(3000)
+  .listen(process.env.PORT || 3000)
 // "http://gatsby-js-builds.s3-website-us-east-1.amazonaws.com/examples/using-remark---1124a063ec2b2d32d826ce451d01db865cf02a12.gatsbydev.com",
