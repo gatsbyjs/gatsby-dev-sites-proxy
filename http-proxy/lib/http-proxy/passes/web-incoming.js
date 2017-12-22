@@ -71,7 +71,6 @@ module.exports = {
       port: common.getPort(req),
       proto: encrypted ? "https" : "http",
     }
-
     ;["for", "port", "proto"].forEach(function(header) {
       req.headers["x-forwarded-" + header] =
         (req.headers["x-forwarded-" + header] || "") +
@@ -112,7 +111,6 @@ module.exports = {
       var forwardError = createErrorHandler(forwardReq, options.forward)
       req.on("error", forwardError)
       forwardReq.on("error", forwardError)
-
       ;(options.buffer || req).pipe(forwardReq)
       if (!options.target) {
         return res.end()
@@ -124,6 +122,8 @@ module.exports = {
       ? https
       : http
     ).request(common.setupOutgoing(options.ssl || {}, options, req))
+
+    console.log(proxyReq)
 
     // Enable developers to modify the proxyReq before headers are sent
     proxyReq.on("socket", function(socket) {
