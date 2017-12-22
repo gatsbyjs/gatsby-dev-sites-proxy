@@ -35,7 +35,6 @@ common.setupOutgoing = function(outgoing, options, req, forward) {
   outgoing.port =
     options[forward || "target"].port ||
     (isSSL.test(options[forward || "target"].protocol) ? 443 : 80)
-
   ;[
     "host",
     "hostname",
@@ -107,6 +106,7 @@ common.setupOutgoing = function(outgoing, options, req, forward) {
   outgoingPath = !options.ignorePath ? outgoingPath : ""
 
   outgoing.path = common.urlJoin(targetPath, outgoingPath)
+  console.log(`outgoing`, outgoing)
 
   if (options.changeOrigin) {
     outgoing.headers.host =
