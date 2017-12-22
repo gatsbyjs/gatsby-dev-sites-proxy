@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-dev-sites-proxy#readme",
   "dependencies": {
+    "compression": "^1.7.1",
+    "connect": "^3.6.5",
     "eventemitter3": "^3.0.0",
     "http-proxy": "^1.16.2",
     "requires-port": "^1.0.0"
