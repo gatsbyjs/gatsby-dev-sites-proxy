@@ -1,5 +1,5 @@
 const http = require("http")
-const httpProxy = require("http-proxy")
+const httpProxy = require("./http-proxy")
 const proxy = httpProxy.createProxyServer()
 console.log(proxy)
 
