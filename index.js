@@ -11,10 +11,17 @@ app.use(function(req, res) {
   if (req.url.slice(-1) === `/`) {
     req.url = `${req.url}index.html`
   }
+
   console.log(req.headers.host, req.url)
-  const target = `http://s3.amazonaws.com/gatsby-js-builds/examples/${
-    req.headers.host
-  }`
+  if (req.headers.host.slice(0, 3) === `www`) {
+    const target = `http://s3.amazonaws.com/gatsby-js-builds/${
+      req.headers.host
+    }`
+  } else {
+    const target = `http://s3.amazonaws.com/gatsby-js-builds/examples/${
+      req.headers.host
+    }`
+  }
 
   console.log(`target`, target)
 
