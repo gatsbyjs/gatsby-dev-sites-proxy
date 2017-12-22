@@ -1,6 +1,7 @@
 const http = require("http")
 const httpProxy = require("http-proxy")
-const proxy = httpProxy.createProxyServer({})
+const proxy = httpProxy.createProxyServer()
+console.log(proxy)
 
 http
   .createServer(function(req, res) {
@@ -13,7 +14,7 @@ http
       req.headers.host
     }`
 
-    console.log(target)
+    console.log(`target`, target)
 
     proxy.web(req, res, {
       prependPath: true,
