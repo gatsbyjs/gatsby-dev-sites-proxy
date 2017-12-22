@@ -1,0 +1,22 @@
+{
+  "name": "gatsby-dev-sites-proxy",
+  "version": "1.0.0",
+  "description": "Proxies sites built for PRs from their S3 bucket",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gatsbyjs/gatsby-dev-sites-proxy.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby-dev-sites-proxy/issues"
+  },
+  "homepage": "https://github.com/gatsbyjs/gatsby-dev-sites-proxy#readme",
+  "dependencies": {
+    "http-proxy": "^1.16.2"
+  }
+}
