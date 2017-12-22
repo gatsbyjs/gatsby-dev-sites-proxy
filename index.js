@@ -9,13 +9,14 @@ http
       req.url = `${req.url}index.html`
     }
     console.log(req.headers.host, req.url)
-    console.log(
-      `http://s3.amazonaws.com/gatsby-js-builds/examples/${req.headers.host}`
-    )
+    const target = `http://s3.amazonaws.com/gatsby-js-builds/examples/${
+      req.headers.host
+    }`
+
+    console.log(target)
+
     proxy.web(req, res, {
-      target: `http://s3.amazonaws.com/gatsby-js-builds/examples/${
-        req.headers.host
-      }`,
+      target,
     })
   })
   .listen(process.env.PORT || 3000)
