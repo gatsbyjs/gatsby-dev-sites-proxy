@@ -16,6 +16,7 @@ http
     console.log(target)
 
     proxy.web(req, res, {
+      prependPath: true,
       target,
     })
   })
