@@ -9,6 +9,9 @@ http
       req.url = `${req.url}index.html`
     }
     console.log(req.headers, req.url)
+    console.log(
+      `http://s3.amazonaws.com/gatsby-js-builds/examples/${req.headers.host}`
+    )
     proxy.web(req, res, {
       target: `http://s3.amazonaws.com/gatsby-js-builds/examples/${
         req.headers.host
