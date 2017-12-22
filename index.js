@@ -18,6 +18,7 @@ http
 
     proxy.web(req, res, {
       prependPath: true,
+      changeOrigin: true,
       target,
     })
   })
